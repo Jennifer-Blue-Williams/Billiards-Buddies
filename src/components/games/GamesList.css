@@ -1,0 +1,10 @@
+
+.gameRecordContainer {
+float: left;
+}
+
+.gameDeleteContainer {
+    float: right;
+    padding-right: 160px;
+    padding-top: 10px;
+}
