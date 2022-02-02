@@ -1,10 +1,10 @@
 
-.gameRecordContainer {
-float: left;
-}
+/* .gameRecordContainer {
+display:flex;
+} */
 
-.gameDeleteContainer {
+/* .gameDeleteContainer {
     float: right;
     padding-right: 160px;
     padding-top: 10px;
-}
+} */
