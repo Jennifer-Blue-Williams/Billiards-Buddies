@@ -51,9 +51,9 @@ return (
         <h2>Your Past Games</h2>
         {
            games.map((game) => {
-               return <div className="gameContainer">
+               return <div key={`gameRecord--${game.id}`} className="gameContainer">
                    <div className="gameRecordContainer">
-                   <p key={`gameRecord--${game.id}`}>
+                   <p>
                         You played {game.opponentName} at {game.venue.name} on {game.matchDate} and you {game.Win? "WON" : "LOST"}</p> 
                     </div>
                     <div className="gameDeleteContainer">

@@ -6,7 +6,7 @@ export const GameForm = () => {
     const [game, updateGame] = useState({
         opponentName: "",
         venue: "",
-        win: false,
+        win: true,
         matchDate: ""
     })
 
@@ -73,11 +73,13 @@ export const GameForm = () => {
                             }
                         }
                  name="venue" id="venue">
+                   <option value={0}>Select a Venue</option>  
                    <option value="1">JOB's Billiards</option>
                    <option value="2">Cobra</option>
                    <option value="3">H-Cues Upsatirs Pool Room</option>
                    <option value="4">Mickey's Tavern</option>
                 </select>
+                {/* This list needs to be dynamically generated */}
                 </div>
 
                 <div>
@@ -89,6 +91,7 @@ export const GameForm = () => {
                             }
                         }
                 name="win" id="win">
+                   <option value={0}>Select Result</option>
                    <option value="true">WON</option>
                    <option value="false">LOST</option>
                 </select>
