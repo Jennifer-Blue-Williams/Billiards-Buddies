@@ -1,37 +1,54 @@
-import React, { useState } from "react"
+import React, { useEffect, useState } from "react"
 import { useHistory } from "react-router-dom"
 
 
+
+
 export const GameForm = () => {
-    const [game, updateGame] = useState({
+const [venues, selectVenues] = useState([])
+
+const handleVenues = () => {
+        fetch("http://localhost:8088/venues")
+        .then( data => data.json())
+        .then( venues => selectVenues(venues))
+}
+
+
+useEffect( () => { 
+    handleVenues();
+}, [] )
+
+const [game, updateGame] = useState({
         opponentName: "",
         venue: "",
         win: true,
         matchDate: ""
     })
-
     const history = useHistory()
     const submitGame = (event) => {
         event.preventDefault()
         // preventDefault stops the browser from automatically submitting the form unti the button is clicked
-    
-    const newGame = {
-        playerId: parseInt(localStorage.getItem("billiards_player")),
-        opponentName: game.opponentName,
-        venueId: parseInt(game.venue),
-        Win: JSON.parse(game.win),
-        matchDate: game.matchDate
-    }    
+        
 
-    const fetchOption = {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify(newGame)
-    }
+        const newGame = {
+            playerId: parseInt(localStorage.getItem("billiards_player")),
+            opponentName: game.opponentName,
+            venueId: parseInt(game.venue),
+            Win: JSON.parse(game.win),
+            matchDate: game.matchDate
+        }    
+        
+        
+        const fetchOption = {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(newGame)
+        }
+        
 
-    return fetch("http://localhost:8088/games", fetchOption)
+        return fetch("http://localhost:8088/games", fetchOption)
         .then(() => {
             history.push("/games")
         })
@@ -65,21 +82,23 @@ export const GameForm = () => {
                 </div>
 
                 <div>
-                <select onChange={
+                <select 
+                name={venues} 
+                id={venues} 
+                onChange={
                             (evt) => {
                                 const copy = {...game}
                                 copy.venue = evt.target.value
                                 updateGame(copy)
                             }
-                        }
-                 name="venue" id="venue">
-                   <option value={0}>Select a Venue</option>  
-                   <option value="1">JOB's Billiards</option>
-                   <option value="2">Cobra</option>
-                   <option value="3">H-Cues Upsatirs Pool Room</option>
-                   <option value="4">Mickey's Tavern</option>
+                        }>
+
+                   <option value={0}>Select a Venue</option>
+        {venues.map((venue) =>
+            <option id={`venue--${venue.id}`} key={venue.id} value={venue.id}>
+            {venue.name}</option>)}
+
                 </select>
-                {/* This list needs to be dynamically generated */}
                 </div>
 
                 <div>

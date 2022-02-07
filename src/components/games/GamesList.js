@@ -4,6 +4,7 @@ import './GamesList.css';
 
 export const GamesList = () => {
     const [games, setGames] = useState([])
+    
     // We define the component's state ( with an intial value of [])
   // and we get a function for changing that state by calling useState()
     const currentPlayerId = parseInt(localStorage.getItem("billiards_player"))
