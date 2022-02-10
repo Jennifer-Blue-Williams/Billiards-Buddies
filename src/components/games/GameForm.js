@@ -7,7 +7,7 @@ import { useHistory } from "react-router-dom"
 export const GameForm = () => {
 const [venues, selectVenues] = useState([])
 
-const handleVenues = () => {
+const getVenues = () => {
         fetch("http://localhost:8088/venues")
         .then( data => data.json())
         .then( venues => selectVenues(venues))
@@ -15,7 +15,7 @@ const handleVenues = () => {
 
 
 useEffect( () => { 
-    handleVenues();
+    getVenues();
 }, [] )
 
 const [game, updateGame] = useState({
@@ -24,8 +24,10 @@ const [game, updateGame] = useState({
         win: true,
         matchDate: ""
     })
-    const history = useHistory()
-    const submitGame = (event) => {
+
+const history = useHistory()
+
+const submitGame = (event) => {
         event.preventDefault()
         // preventDefault stops the browser from automatically submitting the form unti the button is clicked
         
@@ -37,7 +39,7 @@ const [game, updateGame] = useState({
             Win: JSON.parse(game.win),
             matchDate: game.matchDate
         }    
-        
+        // Parse the data with JSON.parse(), and the data becomes a JavaScript object.
         
         const fetchOption = {
             method: "POST",
@@ -46,7 +48,7 @@ const [game, updateGame] = useState({
             },
             body: JSON.stringify(newGame)
         }
-        
+        // The JSON.stringify() method converts a JavaScript object or value to a JSON string
 
         return fetch("http://localhost:8088/games", fetchOption)
         .then(() => {
@@ -58,7 +60,7 @@ const [game, updateGame] = useState({
     <button onClick={() => history.push("/game/create")}>Record Game</button>
 </div> 
     // History directs you to a specific URL, it is used for navigation
-
+    // onClick is an attribute that takes a function
     return (
         <>
         <form className="gameForm">
@@ -70,6 +72,7 @@ const [game, updateGame] = useState({
                         onChange={
                             (evt) => {
                                 const copy = {...game}
+                            // spread operator takes in an iterable (e.g an array) and expands it into individual elements
                                 copy.opponentName = evt.target.value
                                 updateGame(copy)
                             }
@@ -126,8 +129,6 @@ const [game, updateGame] = useState({
                             }
                         }
                         
-
-
                         type="date" id="date"
                         className="form-control"/>
                 </div>
