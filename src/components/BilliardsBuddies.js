@@ -14,7 +14,6 @@ export const BilliardsBuddies = () => (
           return (
             <>
               <NavBar />
-              <h1>Billiards Buddies</h1>
               <ApplicationViews />
             </>
           );

@@ -50,9 +50,20 @@ fieldset {
     z-index: 1;
     min-height: 25rem;
     min-width: 45rem;
-    background-color: hsla(0,0%,100%,0.40);
+    background-color: darkgreen;
     background-blend-mode: overlay;
     background-repeat: no-repeat;
+    border-radius: 10px;
+    border-radius: 10px;
+    color: darkkhaki;
+    margin: 0 auto;
+    text-align: center;
+    padding: 60px;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+}
+
+input {
+    margin: 0 auto;
 }
 
 .button--close {
@@ -63,4 +74,27 @@ fieldset {
 .dialog {
     min-width: 15rem;
     min-height: 5rem;
+}
+
+/* #link--register{
+    color: yellow;
+    font-size: 1rem;
+    text-decoration: none;
+} */
+
+.ball-button {
+    background-color: black;
+    width: 75px;
+    height: 75px;
+    border-radius: 100%;
+    margin: 0 auto;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+}
+
+.inner-ball {
+    border-radius: 63%;
+    width: 50px;
+    height: 50px;
+    margin-top: 3px;
+    font-weight: 800;
 }

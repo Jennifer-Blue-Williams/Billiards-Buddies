@@ -52,7 +52,7 @@ const submitGame = (event) => {
 
         return fetch("http://localhost:8088/games", fetchOption)
         .then(() => {
-            history.push("/games")
+            history.push("/mygames")
         })
     }
 
