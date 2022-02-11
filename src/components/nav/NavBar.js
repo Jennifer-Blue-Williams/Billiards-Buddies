@@ -18,7 +18,7 @@ export const NavBar = (props) => {
             </li>
 
             <li className="navbar__item">
-                <Link className="navbar__link" to="#"
+                <Link id="navbar_logout" className="navbar__link" to="#"
                     onClick={
                         ()=> {
                             localStorage.removeItem("billiards_player")

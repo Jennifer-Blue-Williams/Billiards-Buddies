@@ -28,6 +28,7 @@ export const Login = () => {
     }
 
     return (
+        
         <main className="container--login">
             <dialog className="dialog dialog--auth" ref={existDialog}>
                 <div>User does not exist</div>
@@ -47,14 +48,17 @@ export const Login = () => {
                             required autoFocus />
                     </fieldset>
                     <fieldset>
-                        <button type="submit">
-                            Sign in
+                        <div className="ball-button">
+                        <button className="inner-ball" type="submit">
+                            Break
                         </button>
+                        </div>
                     </fieldset>
-                </form>
-            </section>
-            <section className="link--register">
+                    <div id="link--register">
                 <Link to="/register">Not my buddy yet? Click here now!</Link>
+            </div>
+                </form>
+               
             </section>
         </main>
     )
