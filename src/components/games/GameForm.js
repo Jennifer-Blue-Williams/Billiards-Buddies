@@ -136,9 +136,11 @@ const submitGame = (event) => {
                 
             </fieldset>
             
-            <button className="btn btn-primary" onClick={submitGame}>
-                Submit Game
-            </button>
+            <div className="ball-button" onClick={submitGame}>
+                        <button className="inner-ball" type="submit">
+                            Record
+                        </button>
+                        </div>
         </form>
         </>
     )
