@@ -20,7 +20,7 @@ export const Login = () => {
     existingUserCheck().then((exists) => {
       if (exists) {
         localStorage.setItem("billiards_player", exists.id);
-        history.push("/");
+        history.push("/mygames");
       } else {
         existDialog.current.showModal();
       }
@@ -81,7 +81,11 @@ export const Login = () => {
                   <Col></Col>
                   <Col>
                     <div className="ball-button">
-                      <button className="inner-ball" type="submit">
+                      <button
+                        className="inner-ball"
+                        href="/mygames"
+                        type="submit"
+                      >
                         8
                       </button>
                     </div>

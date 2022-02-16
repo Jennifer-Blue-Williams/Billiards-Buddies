@@ -13,7 +13,7 @@ export const NavBar = (props) => {
           <Nav.Link href="/mygames">My Games</Nav.Link>
           <Nav.Link
             id="navbar_logout"
-            href="#"
+            href="/login"
             onClick={() => {
               localStorage.removeItem("billiards_player");
             }}
