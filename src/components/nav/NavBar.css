@@ -1,37 +1,3 @@
-.navbar {
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: left;
-    background-color: darkgreen;
-    width: 114%;
-    margin-left: -64px;
-
-}
-
-.navbar__item {
-    flex-basis: 20%;
-    -ms-flex-align: right;
-    list-style-type: none;
-    text-align: right;
-    /* margin-left: -10%; */
-}
-
-#navbar_logout{
-    /* padding-left: 364% !important;   */
-}
-.navbar__link {
-    color: goldenrod;
-    font-family: 'Nunito', sans-serif;
-    text-decoration: none;
-    /* margin-right: 32%; */
-    font-weight: 600;
-    font-size: 1.1em;
-}
-
-.navbar__link:visited {
-    text-decoration: none;
-  }
-
-.navbar__link:hover {
-    color: black;
+.nav-link {
+  color: black;
 }
