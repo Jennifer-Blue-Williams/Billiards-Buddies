@@ -1,13 +1,115 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: "Nunito", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.BBHeader {
+  font-family: "Nunito", sans-serif;
+  font-size: 2rem;
+  font-weight: 800;
+  margin-top: 1rem;
+  -webkit-text-stroke: 0.01px #d17000;
+}
+
+.BB {
+  font-family: "Lobster", cursive;
+  font-size: 4rem;
+}
+
+.shiny {
+  color: #f5c21b;
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(#f5c21b),
+    to(#d17000)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 13em;
+  font-weight: 900;
+  position: relative;
+  text-transform: uppercase;
+}
+
+.shiny::after {
+  content: "Billiards Buddies";
+  color: #fff;
+  display: block;
+  position: absolute;
+  text-shadow: 0 1px #6e4414, 0 2px #6e4414, 0 3px #6e4414, 0 4px #6e4414,
+    0 5px #6e4414, 0 6px #6e4414, 0 7px #6e4414, 0 8px #6e4414, 0 9px #6e4414,
+    0 10px #6e4414;
+  top: 0;
+  z-index: -1;
+}
+
+.inner-shiny::after,
+.inner-shiny::before {
+  -webkit-animation: sparkle 5s infinite;
+  -webkit-animation-timing-function: linear;
+  background: #fff;
+  border-radius: 100%;
+  box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #fff,
+    0 0 25px #fff, 0 0 30px #fff, 0 0 35px #fff;
+  content: "";
+  display: block;
+  height: 8px;
+  opacity: 0.7;
+  position: absolute;
+  width: 8px;
+  margin-top: 1rem;
+}
+
+.inner-shiny::before {
+  -webkit-animation-delay: 0.2s;
+  height: 5px;
+  left: 0.1em;
+  top: 1em;
+  width: 5px;
+}
+
+.inner-shiny::after {
+  top: 2.2rem;
+  right: -2px;
+}
+
+@keyframes flare {
+  0% {
+    background-position: -180px;
+  }
+  30% {
+    background-position: 500px;
+  }
+  100% {
+    background-position: 500px;
+  }
+}
+
+@keyframes sparkle {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.8;
+  }
+  60% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
 }

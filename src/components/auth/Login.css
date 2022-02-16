@@ -1,101 +1,119 @@
-.h1, h1 {
-    font-size: 2.5rem;
+.h1,
+h1 {
+  font-size: 2.5rem;
 }
 
 fieldset {
-    min-width: 0;
-    padding: 1rem 0;
-    margin: 0;
-    border: 0;
+  min-width: 0;
+  padding: 1rem 0;
+  margin: 0;
+  border: 0;
 }
 
 .form--login {
-    display: inline-block;
-    margin: 0 auto;
-    text-align: left;
+  display: inline-block;
+  margin: 0 auto;
+  text-align: left;
 }
 
-.form--login > fieldset > input[type="email"] {
-    width: 25em;
-}
-
-.label--login {
-    width: 8rem;
-    display: inline-block;
+#email-input {
+  width: 275px;
+  margin-top: 30px;
+  margin-bottom: 45px;
+  box-shadow: 3px 9px 3px rgb(0 0 0 / 20%);
 }
 
 .form-control {
-    display: block;
-    width: 94%;
-    height: calc(1.5em + .75rem + 2px);
-    padding: .375rem .75rem;
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 1.5;
-    color: #495057;
-    background-color: #fff;
-    background-clip: padding-box;
-    border: 1px solid #ced4da;
-    border-radius: .25rem;
-    -webkit-transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
-    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  display: block;
+  height: calc(1.5em + 0.75rem + 2px);
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  -webkit-transition: border-color 0.15s ease-in-out,
+    box-shadow 0.15s ease-in-out;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
 .container--login {
-    text-align: center;
+  text-align: center;
+  background-image: url("../../assetts/billiards-gc8c038cdb_1920_ccexpress.jpeg");
+  overflow: hidden !important;
+  background-repeat: no-repeat;
 }
 
 .form--login {
-    background-position-x: right;
-    z-index: 1;
-    min-height: 25rem;
-    min-width: 45rem;
-    background-color: darkgreen;
-    background-blend-mode: overlay;
-    background-repeat: no-repeat;
-    border-radius: 10px;
-    border-radius: 10px;
-    color: darkkhaki;
-    margin: 0 auto;
-    text-align: center;
-    padding: 60px;
-    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
-}
-
-input {
-    margin: 0 auto;
+  background-position-x: right;
+  z-index: 1;
+  min-width: 30rem;
+  background-color: rgba(0, 0, 0, 0.4);
+  background-blend-mode: overlay;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+  color: lightseagreen;
+  font-weight: 700;
+  margin: 2rem;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 3px 5px 3px rgb(0 0 0 / 20%);
+  min-height: 20rem;
 }
 
 .button--close {
-    position: relative;
-    bottom: -2rem;
+  position: relative;
+  bottom: -2rem;
 }
 
 .dialog {
-    min-width: 15rem;
-    min-height: 5rem;
+  min-width: 15rem;
+  min-height: 5rem;
 }
 
-/* #link--register{
-    color: yellow;
-    font-size: 1rem;
-    text-decoration: none;
-} */
+.link-container {
+  margin-top: 30px;
+}
+#link-register {
+  color: lightseagreen;
+  font-weight: 500;
+  font-size: 1.1rem;
+  text-decoration: none;
+  margin-top: 43px !important;
+}
+
+#link-register:hover {
+  color: darkblue;
+}
 
 .ball-button {
-    background-color: black;
-    width: 75px;
-    height: 75px;
-    border-radius: 100%;
-    margin: 0 auto;
-    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+  background-color: black;
+  width: 85px;
+  height: 85px;
+  border-radius: 100%;
+  margin: 0 auto;
+  box-shadow: 3px 9px 3px rgb(0 0 0 / 20%);
 }
 
 .inner-ball {
-    border-radius: 63%;
-    width: 50px;
-    height: 50px;
-    margin-top: 9px;
-    font-weight: 800;
-    margin-left: 11px;
+  border-radius: 63%;
+  width: 40px;
+  height: 40px;
+  margin-top: 22px;
+  font-weight: 700;
+  margin-left: 2px;
+  font-size: 1rem;
+  border: none;
+  z-index: -2;
+}
+
+.inner-ball:hover {
+  border-radius: 63%;
+  width: 45px;
+  height: 45px;
+  z-index: 2;
+  color: darkolivegreen;
 }
