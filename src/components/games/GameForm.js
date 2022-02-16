@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useHistory } from "react-router-dom";
-import { Col, Row, Input, Container } from "react-bootstrap";
+import { Col, Row, Container } from "react-bootstrap";
 
 export const GameForm = () => {
   const [venues, selectVenues] = useState([]);
