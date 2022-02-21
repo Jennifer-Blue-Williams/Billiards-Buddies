@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { Col, Row, Input, Container } from "react-bootstrap";
-import "./GamesList.css";
+import "./GamesShow.css";
 
 export const GamesShow = () => {
   const [playerGames, setPlayerGames] = useState([]);
@@ -19,28 +19,26 @@ export const GamesShow = () => {
   }, [id]);
 
   return (
-    <>
-      <Container>
-        {/* <Row>
-          <Col></Col>
-          <Col>
-            <h2>Past Games</h2>
-          </Col>
-          <Col></Col>
-        </Row> */}
-        {playerGames.map((game) => {
-          return (
-            <div key={`gameRecord--${game.id}`} className="gameContainer">
-              <div className="gameRecordContainer">
-                <p>
-                  You played {game.opponentName} at {game?.venue?.name} on{" "}
-                  {game.matchDate} and you {game.Win ? "WON" : "LOST"}
-                </p>
-              </div>
-            </div>
-          );
-        })}
-      </Container>
-    </>
+    <Row>
+      <div id="games-main-div">
+        <Col>
+          <div>
+            {/* <h2>Past Games</h2> */}
+            {playerGames.map((game) => {
+              return (
+                <div key={`gameRecord--${game.id}`} className="">
+                  <div className="">
+                    <p className="game-text">
+                      Played against {game.opponentName} at {game?.venue?.name}{" "}
+                      on {game.matchDate} and you {game.Win ? "WON" : "LOST"}
+                    </p>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </Col>
+      </div>
+    </Row>
   );
 };

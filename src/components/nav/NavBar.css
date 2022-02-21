@@ -1,3 +1,16 @@
 .nav-link {
-  color: black;
+  display: block;
+  padding: 0.5rem 1rem;
+  color: lightseagreen !important;
+  text-decoration: none;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out;
+}
+
+.nav-link:hover {
+  color: #d17000;
+}
+
+.navbar-light .navbar-brand {
+  color: #d17000 !important;
 }
