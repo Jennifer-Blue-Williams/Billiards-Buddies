@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import "./GamesList.css";
 import { Col, Row, Container } from "react-bootstrap";
 
 export const GamesList = () => {
@@ -37,39 +36,34 @@ export const GamesList = () => {
   return (
     <>
       <Container>
-        <Row>
-          <Col></Col>
-          <Col>
-            <h2>Your Past Games</h2>
-          </Col>
-          <Col></Col>
-        </Row>
-        {games.map((game) => {
-          return (
-            <div key={`gameRecord--${game.id}`} className="gameContainer">
-              <Row>
-                <Col>
-                  <div className="gameRecordContainer">
-                    <p>
-                      You played {game.opponentName} at {game.venue.name} on{" "}
-                      {game.matchDate} and you {game.Win ? "WON" : "LOST"}
-                    </p>
-                  </div>
-                </Col>
-                <Col>
-                  <div className="gameDeleteContainer">
-                    <button
-                      className="btn--orderDelete"
-                      onClick={() => deleteGame(game.id)}
-                    >
-                      Delete
-                    </button>
-                  </div>
-                </Col>
-              </Row>
-            </div>
-          );
-        })}
+        <div className="main-div">
+          {games.map((game) => {
+            return (
+              <div key={`gameRecord--${game.id}`}>
+                <Row>
+                  <Col>
+                    <div>
+                      <p>
+                        You played {game.opponentName} at {game.venue.name} on{" "}
+                        {game.matchDate} and you {game.Win ? "WON" : "LOST"}
+                      </p>
+                    </div>
+                  </Col>
+                  <Col>
+                    <div className="gameDeleteContainer">
+                      <button
+                        className="btn--orderDelete"
+                        onClick={() => deleteGame(game.id)}
+                      >
+                        Delete
+                      </button>
+                    </div>
+                  </Col>
+                </Row>
+              </div>
+            );
+          })}
+        </div>
       </Container>
     </>
   );

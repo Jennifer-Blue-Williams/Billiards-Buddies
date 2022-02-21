@@ -3,6 +3,10 @@ body {
   font-family: "Nunito", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  background-image: url("./assetts/billiards-gc8c038cdb_1920_ccexpress.jpeg");
+  overflow: hidden !important;
+  background-repeat: no-repeat;
 }
 
 code {
@@ -16,6 +20,24 @@ code {
   font-weight: 800;
   margin-top: 1rem;
   -webkit-text-stroke: 0.01px #d17000;
+}
+
+.main-div {
+  background-position-x: right;
+  z-index: 1;
+  min-width: 30rem;
+  background-color: rgba(0, 0, 0, 0.4);
+  background-blend-mode: overlay;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+  color: lightseagreen;
+  font-weight: 700;
+  margin: 2rem;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 3px 5px 3px rgb(0 0 0 / 20%);
+  min-height: 20rem;
+  overflow-y: scroll;
 }
 
 .BB {

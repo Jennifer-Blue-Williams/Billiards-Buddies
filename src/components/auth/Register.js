@@ -29,7 +29,7 @@ export const Register = (props) => {
           .then((createdUser) => {
             if (createdUser.hasOwnProperty("id")) {
               localStorage.setItem("billiards_player", createdUser.id);
-              history.push("/");
+              history.push("/games/create");
             }
           });
       } else {
@@ -56,38 +56,40 @@ export const Register = (props) => {
         </button>
       </dialog>
 
-      <form className="form--login" onSubmit={handleRegister}>
-        <h1 className="h3 mb-3 font-weight-normal">
-          Please Register for Billiards Buddies
-        </h1>
-        <fieldset>
-          <label htmlFor="name"> Full Name </label>
-          <input
-            onChange={updatePlayer}
-            type="text"
-            id="name"
-            className="form-control"
-            placeholder="Enter your name"
-            required
-            autoFocus
-          />
-        </fieldset>
+      <div className="main-div">
+        <form onSubmit={handleRegister}>
+          <h1 className="h3 mb-3 font-weight-normal">
+            Please Register for Billiards Buddies
+          </h1>
+          <fieldset>
+            <label htmlFor="name"> Full Name </label>
+            <input
+              onChange={updatePlayer}
+              type="text"
+              id="name"
+              className="form-control"
+              placeholder="Enter your name"
+              required
+              autoFocus
+            />
+          </fieldset>
 
-        <fieldset>
-          <label htmlFor="email"> Email address </label>
-          <input
-            onChange={updatePlayer}
-            type="email"
-            id="email"
-            className="form-control"
-            placeholder="Email address"
-            required
-          />
-        </fieldset>
-        <fieldset>
-          <button type="submit"> Register </button>
-        </fieldset>
-      </form>
+          <fieldset>
+            <label htmlFor="email"> Email address </label>
+            <input
+              onChange={updatePlayer}
+              type="email"
+              id="email"
+              className="form-control"
+              placeholder="Email address"
+              required
+            />
+          </fieldset>
+          <fieldset>
+            <button type="submit"> Register </button>
+          </fieldset>
+        </form>
+      </div>
     </div>
   );
 };
