@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { Col, Row, Input, Container } from "react-bootstrap";
+import { Col, Row } from "react-bootstrap";
 import "./GamesShow.css";
 
 export const GamesShow = () => {

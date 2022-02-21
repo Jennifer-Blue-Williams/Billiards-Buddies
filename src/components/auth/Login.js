@@ -86,7 +86,7 @@ export const Login = () => {
                         href="/mygames"
                         type="submit"
                       >
-                        8
+                        BREAK!
                       </button>
                     </div>
                   </Col>

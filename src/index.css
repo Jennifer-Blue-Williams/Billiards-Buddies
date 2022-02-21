@@ -37,7 +37,8 @@ code {
   text-align: center;
   box-shadow: 3px 5px 3px rgb(0 0 0 / 20%);
   min-height: 20rem;
-  overflow-y: scroll;
+  overflow: auto;
+  max-height: 30rem;
 }
 
 .BB {
