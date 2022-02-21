@@ -2,7 +2,7 @@ Billiards Buddies
 
 ## About Billiards Buddies
 
-This app was created for myself and my friends that I play pool with. The Billiards Buddies app allows users to log in and record nythe results of a game against any other player so they can track their personal wins/losses. This will give the user an idea of where they stand ability-wise amongst their peers and provide a way to meet other players through friends. 
+This app was created for myself and my friends that I play pool with. The Billiards Buddies app allows users to log in and record the results of a game against any other player so they can track their personal wins/losses. This will give the user an idea of where they stand ability-wise amongst their peers and provide a way to meet other players through friends. 
 
 ### How is Billiards Buddies Useful?
 
