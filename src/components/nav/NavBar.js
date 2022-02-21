@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, NavDropdown, Navbar, Nav } from "react-bootstrap";
+import { Navbar, Nav } from "react-bootstrap";
 import "./NavBar.css";
 
 export const NavBar = (props) => {
@@ -19,35 +19,6 @@ export const NavBar = (props) => {
         >
           Logout
         </Nav.Link>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="me-auto">
-            <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">
-                <Nav.Link href="/players">Players</Nav.Link>
-              </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">
-                <Nav.Link href="/mygames">My Games</Nav.Link>
-              </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">
-                <Nav.Link href="/mygames">My Games</Nav.Link>
-              </NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.4">
-                <Nav.Link
-                  id="navbar_logout"
-                  href="/login"
-                  onClick={() => {
-                    localStorage.removeItem("billiards_player");
-                  }}
-                >
-                  Logout
-                </Nav.Link>
-              </NavDropdown.Item>
-            </NavDropdown>
-          </Nav>
-        </Navbar.Collapse>
       </Navbar>
     </>
   );

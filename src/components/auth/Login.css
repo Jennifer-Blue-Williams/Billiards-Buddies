@@ -86,7 +86,7 @@ fieldset {
 }
 
 #link-register:hover {
-  color: darkblue;
+  color: #f5c21b;
 }
 
 .ball-button {
@@ -99,6 +99,7 @@ fieldset {
 }
 
 .inner-ball {
+  color: lightseagreen;
   border-radius: 63%;
   width: 40px;
   height: 40px;
@@ -115,5 +116,5 @@ fieldset {
   width: 45px;
   height: 45px;
   z-index: 2;
-  color: darkolivegreen;
+  color: #f5c21b;
 }
